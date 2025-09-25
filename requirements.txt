@@ -1,0 +1,4 @@
+#dependencies for calculator app
+unittest2
+#or an empty requirement file
+#since, no extra dependencies needed
