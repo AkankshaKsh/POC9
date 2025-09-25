@@ -1,0 +1,11 @@
+- hosts: targets
+  become: true
+  tasks:
+    - name: Pull Docker image
+      shell: docker pull kshakanksha/ak-app:latest
+
+    - name: remove old container
+      shell: docker rm -f myapp || true
+
+    - name: Run container
+      shell: docker run -d --name myapp -p 80:80 kshakanksha/ak-app:latest
